@@ -1,0 +1,392 @@
+/* Styling Manual Pengganti Tailwind */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid #f1f5f9;
+    padding: 16px 24px;
+}
+
+.nav-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.badge-knn {
+    font-size: 0.75rem;
+    background-color: #eff6ff;
+    color: #2563eb;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    font-weight: 500;
+}
+
+/* Widget Jam Navbar Asli */
+.nav-time-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 0.85rem;
+  color: #333333;
+  background: #f0f4f8;
+  padding: 5px 12px;
+  border-radius: 6px;
+  border: 1px solid #d0d7de;
+}
+
+.nav-time-widget #jam-running {
+  font-weight: bold;
+  color: #0066cc;
+  font-size: 0.95rem;
+}
+
+.nav-right-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Main Layout */
+.main-container {
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Style Running Text Destinasi di Atas Hero Section */
+.running-banner-wrapper {
+    width: 100%;
+    background: #e0f2fe;
+    border: 1px solid #bae6fd;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    padding: 8px 0;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+}
+
+.running-banner-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.running-banner-track {
+    display: inline-block;
+    white-space: nowrap;
+    animation: marqueeBanner 35s linear infinite;
+}
+
+.running-banner-track:hover {
+    animation-play-state: paused; /* Berhenti sebentar saat kursor diarahkan */
+}
+
+.banner-item {
+    display: inline-block;
+    margin-right: 35px;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: opacity 0.2s;
+}
+
+.banner-item:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+/* Warna Selang-seling Biru dan Hitam */
+.banner-item.text-blue {
+    color: #2563eb; /* Biru */
+}
+
+.banner-item.text-black {
+    color: #0f172a; /* Hitam */
+}
+
+/* Animasi Geser Running Text Banner */
+@keyframes marqueeBanner {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.hero-section {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.hero-section h2 {
+    font-size: 1.875rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.hero-section p {
+    color: #64748b;
+    font-size: 0.875rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Card */
+.card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    padding: 24px;
+    margin-bottom: 32px;
+}
+
+label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 8px;
+}
+
+textarea {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid #cbd5e1;
+    padding: 16px;
+    font-size: 0.875rem;
+    resize: none;
+    outline: none;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+textarea:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.form-footer {
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.tips-text {
+    font-size: 0.75rem;
+    color: #94a3b8;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: white;
+    font-weight: 500;
+    padding: 10px 24px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Hasil Rekomendasi */
+.result-space {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.card-utama {
+    background: linear-gradient(to bottom right, #2563eb, #4f46e5);
+    border-radius: 16px;
+    color: white;
+    padding: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge-utama {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 9999px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-utama h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 12px;
+}
+
+.negara-text {
+    color: #dbeafe;
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+.negara-text span {
+    font-weight: 600;
+    color: white;
+}
+
+.badge-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+    font-size: 0.875rem;
+}
+
+.info-badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+.btn-wrapper {
+    margin-top: 24px;
+}
+
+.btn-white {
+    display: inline-block;
+    background-color: white;
+    color: #2563eb;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    text-decoration: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s;
+}
+
+.btn-white:hover {
+    background-color: #eff6ff;
+}
+
+/* Grid Alternatif */
+.sub-heading {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1e293b;
+    margin-bottom: 16px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.alt-card {
+    margin-bottom: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.badge-negara {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2563eb;
+    background-color: #eff6ff;
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
+.alt-title {
+    font-weight: bold;
+    color: #1e293b;
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+.alt-info {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-top: 8px;
+    display: flex;
+    gap: 16px;
+}
+
+.alt-harga {
+    font-weight: 600;
+    color: #334155;
+}
+
+.alt-footer {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #f1f5f9;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.link-detail {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.link-detail:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    border-top: 1px solid #f1f5f9;
+    margin-top: 48px;
+}
